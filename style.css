@@ -1,0 +1,356 @@
+*, 
+*::before, 
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+:root {
+    --Strong-Cyan: hsl(171, 66%, 44%);
+    --Light-Blue: hsl(233, 100%, 69%);
+    --Dark-Grayish-Blue: hsl(210, 10%, 33%);
+    --Grayish-Blue: hsl(201, 11%, 66%);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    height: 100%;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: .9375rem;
+    font-weight: 400;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    background: url("./images/bg-header-mobile.png") no-repeat top;
+    background-size: contain;
+    display: grid;
+    place-items: center;
+    gap: 3rem;
+    min-height: 100%;
+}
+
+h1, h2, h3, h4 {
+    color: var(--Dark-Grayish-Blue);
+    line-height: 1.4;
+}
+
+h1 {
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.6rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-bottom: .8rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+p {
+    color: var(--Grayish-Blue);
+}
+
+header {
+    margin-top: 6rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6.5rem;
+    padding-inline: 2.2rem;
+    padding-bottom: 5rem;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-inline: auto;
+    gap: 1rem;
+}
+
+
+.download {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.3rem;
+    margin-top: 1.5rem;
+}
+
+.iOS {
+    background-color: var(--Strong-Cyan);
+    border-bottom: 4px solid hsla(171, 81%, 25%, 0.541);
+    box-shadow: 3px 5px 15px hsla(171, 66%, 44%, 0.363);
+}
+
+.mac {
+    background-color: var(--Light-Blue);
+    border-bottom: 4px solid hsla(233, 74%, 21%, 0.541);
+    box-shadow: 3px 5px 15px hsla(233, 100%, 69%, 0.521);
+}
+
+.download > * {
+    padding: 1rem;
+    font-size: 1.125rem;
+    color: white;
+    font-weight: 600;
+    border-radius: 30px;
+}
+
+.pc {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3.5rem;
+    gap: 3.5rem;
+}
+
+.pc-features {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+}
+
+.devices-section {
+    display: flex;
+    flex-direction: column;
+    margin-inline: auto;
+    gap: 3.5rem;
+}
+
+.more-section {
+    margin-inline: auto;
+}
+
+.capability {
+    margin-top: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.container > img {
+    margin-block: 1rem;
+}
+
+.sponsors {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-inline: auto;
+    gap: 3rem;
+}
+
+footer {
+    background-color: hsla(201, 11%, 66%, .2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding-block: 3rem;
+    width: 100%;
+}
+
+.logo-area {
+    width: 50px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.link > * {
+    color: var(--Dark-Grayish-Blue);
+}
+
+.social {
+    display: flex;
+    gap: 2rem;
+}
+
+
+@media (pointer:fine) and (hover:hover) {
+    .download > *:is(:hover, :focus) {
+        opacity: .7;
+    }
+
+    .link > *:is(:hover, :focus) {
+        color: var(--Strong-Cyan);
+    }
+
+    .social > a:is(:hover, :focus) > svg > path {
+        fill: var(--Strong-Cyan);
+    }
+}
+
+@media (min-width: 900px) {
+    body {
+        background: url("./images/bg-header-desktop.png") no-repeat top;
+        background-size: contain;
+        font-size: 1.125rem;
+    }
+
+    h1 {
+        font-size: 2.7rem;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    h3 {
+        font-size: 1.7rem;
+    }
+    
+    h4 {
+        font-size: 1.5rem;
+    }
+
+    main {
+        padding-inline: 0;
+    }
+
+    main > * {
+        max-width: 700px;
+    }
+
+    .download {
+        flex-direction: row;
+    }
+
+    .download > * {
+        padding-inline: 2.3rem;
+    }
+
+    .pc-section {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pc-section > .description {
+        max-width: 700px;
+    }
+
+    .pc {
+        flex-direction: row;
+        gap: 6rem;
+    }
+
+    .pc > img {
+        width: 50%;
+    }
+
+    .pc-features {
+        flex-basis: 28%;
+        text-align: start;
+    }
+
+    .more-section {
+        min-width: 80%;
+    }
+
+    .capability {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+
+    .capability > * {
+        flex-basis: 33%;
+    }
+
+    .capability > :not(:first-child){
+        align-self: flex-start;
+        margin-top: .55rem;
+    }
+
+    .sponsors {
+        flex-direction: row;
+        min-width: 80%;
+        justify-content: space-between;
+        padding: 5em 0;
+    }
+
+    footer {
+        flex-direction: row;
+        gap: 8rem;
+    }
+
+    .logo-area {
+        margin-left: auto;
+    }
+
+    .links {
+        flex-direction: row;
+        gap: 5vw;
+    }
+
+    .link {
+        align-items: flex-start;
+    }
+
+    .social {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+
+
+
+
+
+
+

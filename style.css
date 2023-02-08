@@ -46,7 +46,7 @@ body {
     background: url("./images/bg-header-mobile.png") no-repeat top;
     background-size: contain;
     display: grid;
-    place-items: center;
+    grid-template-rows: auto 1fr auto;
     gap: 3rem;
     min-height: 100%;
 }
@@ -79,6 +79,7 @@ p {
 
 header {
     margin-top: 6rem;
+    place-self: center;
 }
 
 main {
